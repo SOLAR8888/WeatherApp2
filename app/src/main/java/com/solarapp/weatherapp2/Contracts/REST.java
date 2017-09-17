@@ -7,6 +7,6 @@ package com.solarapp.weatherapp2.Contracts;
 public interface REST {
 
     String BASE_URL = "http://dataservice.accuweather.com/";
-    String API_KEY = "OFzQUiLPyjjnmEvKeUZwU1sNLWxJF10V";
+    String API_KEY = "bzqao8VyEwlEGYO9Vf2oVVU0cw1Mbias";
 
 }
