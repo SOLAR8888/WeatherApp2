@@ -5,11 +5,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.solarapp.weatherapp2.Contracts.ContractMain;
 import com.solarapp.weatherapp2.Contracts.DataBase;
-import com.solarapp.weatherapp2.Contracts.IMainPresenter;
-import com.solarapp.weatherapp2.Contracts.IMainView;
 import com.solarapp.weatherapp2.Contracts.REST;
-import com.solarapp.weatherapp2.Contracts.WeatherAPI;
 import com.solarapp.weatherapp2.DBHelper;
 import com.solarapp.weatherapp2.Models.City;
 import com.solarapp.weatherapp2.Models.Region;
@@ -20,18 +18,16 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+
+import static com.solarapp.weatherapp2.App.getWeatherAPI;
 
 /**
  * Created by vereskun on 16.09.2017.
  */
 
-public class MainPresenter implements IMainPresenter {
+public class MainPresenter implements ContractMain.IMainPresenter {
 
-    private IMainView view;
-    private WeatherAPI weatherAPI;
-    private Retrofit retrofit;
+    private ContractMain.IMainView view;
     private ArrayList<Region> regions;
     private ArrayList<Region> countries;
     private Region selectedCountry;
@@ -47,21 +43,13 @@ public class MainPresenter implements IMainPresenter {
     private ArrayList<String> preferCitiesKey;
     private Context context;
 
-    public MainPresenter(IMainView view, Context context){
+    public MainPresenter(ContractMain.IMainView view, Context context){
         this.view = view;
-        retrofit = new Retrofit.Builder()
-                .baseUrl(REST.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        weatherAPI = retrofit.create(WeatherAPI.class);
         dbHelper = new DBHelper(context);
         db = dbHelper.getWritableDatabase();
         this.context = context;
     }
 
-    public WeatherAPI getWeatherAPI() {
-        return weatherAPI;
-    }
 
     @Override
     public void onSpRegionsItemSelected(int position) {

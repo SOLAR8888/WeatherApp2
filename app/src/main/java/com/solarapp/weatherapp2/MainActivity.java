@@ -19,15 +19,15 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.solarapp.weatherapp2.Contracts.IMainView;
+import com.solarapp.weatherapp2.Contracts.ContractMain;
 import com.solarapp.weatherapp2.Presenters.MainPresenter;
 import com.solarapp.weatherapp2.Views.ShowDetails;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements IMainView{
+public class MainActivity extends AppCompatActivity implements ContractMain.IMainView{
 
-    private MainPresenter mainPresenter;
+    private ContractMain.IMainPresenter mainPresenter;
 
     private ConstraintLayout selectLayout;
     private ConstraintLayout preferLayout;
@@ -197,8 +197,10 @@ public class MainActivity extends AppCompatActivity implements IMainView{
 
     @Override
     public void setCitiesListAdapter(ArrayList<String> cities) {
-        ArrayAdapter<String> lvCitiesAdepter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,cities);
-        lvCities.setAdapter(lvCitiesAdepter);
+        if (cities!=null) {
+            ArrayAdapter<String> lvCitiesAdepter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, cities);
+            lvCities.setAdapter(lvCitiesAdepter);
+        }
     }
 
     @Override

@@ -7,15 +7,15 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.solarapp.weatherapp2.Adapters.DetailsAdapter;
-import com.solarapp.weatherapp2.Contracts.IDetailView;
+import com.solarapp.weatherapp2.Contracts.ContractDetails;
 import com.solarapp.weatherapp2.Presenters.DetailsPresenter;
 import com.solarapp.weatherapp2.R;
 
-public class ShowDetails extends AppCompatActivity implements IDetailView{
+public class ShowDetails extends AppCompatActivity implements ContractDetails.IDetailView{
 
     private RecyclerView rvDetails;
     private RecyclerView.LayoutManager mLayoutManager;
-    private DetailsPresenter detailsPresenter;
+    private ContractDetails.IDetailsPresenter detailsPresenter;
     private String key = "349727";
 
     @Override
