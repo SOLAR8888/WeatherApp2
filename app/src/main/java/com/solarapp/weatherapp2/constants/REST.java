@@ -1,4 +1,4 @@
-package com.solarapp.weatherapp2.Contracts;
+package com.solarapp.weatherapp2.constants;
 
 /**
  * Created by vereskun on 16.09.2017.
@@ -7,6 +7,6 @@ package com.solarapp.weatherapp2.Contracts;
 public interface REST {
 
     String BASE_URL = "http://dataservice.accuweather.com/";
-    String API_KEY = "bzqao8VyEwlEGYO9Vf2oVVU0cw1Mbias";
+    String API_KEY = "CFGG9GNYoZAm36mT3bUGcGHKWQOlX6DO";
 
 }

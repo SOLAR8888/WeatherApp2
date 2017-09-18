@@ -1,4 +1,4 @@
-package com.solarapp.weatherapp2.Models;
+package com.solarapp.weatherapp2.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

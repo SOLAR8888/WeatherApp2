@@ -1,8 +1,8 @@
-package com.solarapp.weatherapp2.Contracts;
+package com.solarapp.weatherapp2;
 
-import com.solarapp.weatherapp2.Models.City;
-import com.solarapp.weatherapp2.Models.Region;
-import com.solarapp.weatherapp2.Models.Weather;
+import com.solarapp.weatherapp2.models.City;
+import com.solarapp.weatherapp2.models.Region;
+import com.solarapp.weatherapp2.models.Weather;
 
 import java.util.List;
 

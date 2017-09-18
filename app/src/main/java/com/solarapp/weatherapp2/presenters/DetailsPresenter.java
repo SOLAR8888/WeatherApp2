@@ -1,9 +1,9 @@
-package com.solarapp.weatherapp2.Presenters;
+package com.solarapp.weatherapp2.presenters;
 
-import com.solarapp.weatherapp2.Adapters.DetailsAdapter;
-import com.solarapp.weatherapp2.Contracts.ContractDetails;
-import com.solarapp.weatherapp2.Contracts.REST;
-import com.solarapp.weatherapp2.Models.Weather;
+import com.solarapp.weatherapp2.adapters.DetailsAdapter;
+import com.solarapp.weatherapp2.contracts.ContractDetails;
+import com.solarapp.weatherapp2.constants.REST;
+import com.solarapp.weatherapp2.models.Weather;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -15,12 +15,12 @@ import static com.solarapp.weatherapp2.App.getWeatherAPI;
  * Created by vereskun on 16.09.2017.
  */
 
-public class DetailsPresenter implements ContractDetails.IDetailsPresenter{
+public class DetailsPresenter implements ContractDetails.DetailsPresenterable {
 
-    private ContractDetails.IDetailView view;
+    private ContractDetails.DetailViewable view;
     private String key;
 
-    public DetailsPresenter(ContractDetails.IDetailView view, String key) {
+    public DetailsPresenter(ContractDetails.DetailViewable view, String key) {
         this.view = view;
         this.key = key;
     }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorButtonNormal"
-    tools:context="com.solarapp.weatherapp2.Views.ShowDetails">
+    tools:context="com.solarapp.weatherapp2.views.ShowDetails">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvDetails"

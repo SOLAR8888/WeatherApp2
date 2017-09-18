@@ -1,4 +1,4 @@
-package com.solarapp.weatherapp2.Contracts;
+package com.solarapp.weatherapp2.contracts;
 
 import java.util.ArrayList;
 
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class ContractMain {
 
-    public interface IMainView {
+    public interface MainViewable {
 
         void setSpRegionsAdspter(String[] regions);
         void setSpCountriesAdapter(String[] countries);
@@ -28,7 +28,7 @@ public class ContractMain {
 
     }
 
-    public interface IMainPresenter {
+    public interface MainPresenterable {
 
         void onSpRegionsItemSelected(int position);
         void onSpCoutriesItemSelected(int position);

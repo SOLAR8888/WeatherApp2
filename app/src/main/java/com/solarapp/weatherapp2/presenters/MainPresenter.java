@@ -1,16 +1,16 @@
-package com.solarapp.weatherapp2.Presenters;
+package com.solarapp.weatherapp2.presenters;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.solarapp.weatherapp2.Contracts.ContractMain;
-import com.solarapp.weatherapp2.Contracts.DataBase;
-import com.solarapp.weatherapp2.Contracts.REST;
+import com.solarapp.weatherapp2.contracts.ContractMain;
+import com.solarapp.weatherapp2.constants.DataBase;
+import com.solarapp.weatherapp2.constants.REST;
 import com.solarapp.weatherapp2.DBHelper;
-import com.solarapp.weatherapp2.Models.City;
-import com.solarapp.weatherapp2.Models.Region;
+import com.solarapp.weatherapp2.models.City;
+import com.solarapp.weatherapp2.models.Region;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,9 +25,9 @@ import static com.solarapp.weatherapp2.App.getWeatherAPI;
  * Created by vereskun on 16.09.2017.
  */
 
-public class MainPresenter implements ContractMain.IMainPresenter {
+public class MainPresenter implements ContractMain.MainPresenterable {
 
-    private ContractMain.IMainView view;
+    private ContractMain.MainViewable view;
     private ArrayList<Region> regions;
     private ArrayList<Region> countries;
     private Region selectedCountry;
@@ -43,7 +43,7 @@ public class MainPresenter implements ContractMain.IMainPresenter {
     private ArrayList<String> preferCitiesKey;
     private Context context;
 
-    public MainPresenter(ContractMain.IMainView view, Context context){
+    public MainPresenter(ContractMain.MainViewable view, Context context){
         this.view = view;
         dbHelper = new DBHelper(context);
         db = dbHelper.getWritableDatabase();

@@ -2,8 +2,7 @@ package com.solarapp.weatherapp2;
 
 import android.app.Application;
 
-import com.solarapp.weatherapp2.Contracts.REST;
-import com.solarapp.weatherapp2.Contracts.WeatherAPI;
+import com.solarapp.weatherapp2.constants.REST;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

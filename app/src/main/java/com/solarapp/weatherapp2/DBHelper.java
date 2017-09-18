@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.solarapp.weatherapp2.Contracts.DataBase;
+import com.solarapp.weatherapp2.constants.DataBase;
 
 /**
  * Created by vereskun on 16.09.2017.

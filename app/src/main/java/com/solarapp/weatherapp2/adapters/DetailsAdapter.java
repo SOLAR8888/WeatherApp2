@@ -1,4 +1,4 @@
-package com.solarapp.weatherapp2.Adapters;
+package com.solarapp.weatherapp2.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.solarapp.weatherapp2.Models.Weather;
+import com.solarapp.weatherapp2.models.Weather;
 import com.solarapp.weatherapp2.R;
 
 /**

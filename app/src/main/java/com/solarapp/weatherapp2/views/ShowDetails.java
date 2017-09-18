@@ -1,4 +1,4 @@
-package com.solarapp.weatherapp2.Views;
+package com.solarapp.weatherapp2.views;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,16 +6,16 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
-import com.solarapp.weatherapp2.Adapters.DetailsAdapter;
-import com.solarapp.weatherapp2.Contracts.ContractDetails;
-import com.solarapp.weatherapp2.Presenters.DetailsPresenter;
+import com.solarapp.weatherapp2.adapters.DetailsAdapter;
+import com.solarapp.weatherapp2.contracts.ContractDetails;
+import com.solarapp.weatherapp2.presenters.DetailsPresenter;
 import com.solarapp.weatherapp2.R;
 
-public class ShowDetails extends AppCompatActivity implements ContractDetails.IDetailView{
+public class ShowDetails extends AppCompatActivity implements ContractDetails.DetailViewable {
 
     private RecyclerView rvDetails;
     private RecyclerView.LayoutManager mLayoutManager;
-    private ContractDetails.IDetailsPresenter detailsPresenter;
+    private ContractDetails.DetailsPresenterable detailsPresenter;
     private String key = "349727";
 
     @Override

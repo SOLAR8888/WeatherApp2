@@ -19,15 +19,15 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.solarapp.weatherapp2.Contracts.ContractMain;
-import com.solarapp.weatherapp2.Presenters.MainPresenter;
-import com.solarapp.weatherapp2.Views.ShowDetails;
+import com.solarapp.weatherapp2.contracts.ContractMain;
+import com.solarapp.weatherapp2.presenters.MainPresenter;
+import com.solarapp.weatherapp2.views.ShowDetails;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements ContractMain.IMainView{
+public class MainActivity extends AppCompatActivity implements ContractMain.MainViewable {
 
-    private ContractMain.IMainPresenter mainPresenter;
+    private ContractMain.MainPresenterable mainPresenter;
 
     private ConstraintLayout selectLayout;
     private ConstraintLayout preferLayout;

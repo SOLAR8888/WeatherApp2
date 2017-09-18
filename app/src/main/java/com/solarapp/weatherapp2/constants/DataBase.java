@@ -1,4 +1,4 @@
-package com.solarapp.weatherapp2.Contracts;
+package com.solarapp.weatherapp2.constants;
 
 /**
  * Created by vereskun on 16.09.2017.

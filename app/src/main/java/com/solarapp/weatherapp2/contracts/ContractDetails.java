@@ -1,6 +1,6 @@
-package com.solarapp.weatherapp2.Contracts;
+package com.solarapp.weatherapp2.contracts;
 
-import com.solarapp.weatherapp2.Adapters.DetailsAdapter;
+import com.solarapp.weatherapp2.adapters.DetailsAdapter;
 
 /**
  * Created by avereskun on 18.09.2017.
@@ -8,7 +8,7 @@ import com.solarapp.weatherapp2.Adapters.DetailsAdapter;
 
 public class ContractDetails {
 
-    public interface IDetailView {
+    public interface DetailViewable {
 
         void setDatailsAdapter(DetailsAdapter adapter);
 
@@ -16,7 +16,7 @@ public class ContractDetails {
 
     }
 
-    public interface IDetailsPresenter {
+    public interface DetailsPresenterable {
 
         void onViewCreated();
 
