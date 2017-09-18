@@ -1,4 +1,4 @@
 # WeatherApp2
 в проекте используется триальный ключ для сервиса accuweather.com, поэтому количество запросов с одного ключа ограничено.
 Если появляется тост, что возможно срок действия API_KEY истек, то так оно и есть.
-Сгенерить новый ключ можно тут https://developer.accuweather.com/user/me/apps
+Сгенерить новый ключ можно <a href=https://developer.accuweather.com/user/me/apps>тут</a>
